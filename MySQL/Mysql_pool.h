@@ -6,7 +6,7 @@
 #include <string>
 #include <error.h>
 #include <mysql/mysql.h>
-#include "../lock/locker.h"
+#include "../Lock/locker.h"
 
 using namespace std;
 
