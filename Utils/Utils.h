@@ -1,7 +1,7 @@
 #ifndef UTILS
 #define UTILS
 
-#include "../timer/timer.h"
+#include "../Timer/timer.h"
 
 class Utils
 {

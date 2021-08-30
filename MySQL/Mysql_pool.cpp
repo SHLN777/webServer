@@ -102,3 +102,20 @@ mysql_pool::~mysql_pool()
 {
     DestoryConn();
 }
+
+
+
+connectionRAII::connectionRAII(MYSQL **SQL, connection_pool *connPool){
+	*SQL = connPool->GetConnection();
+	
+	conRAII = *SQL;
+	poolRAII = connPool;
+}
+
+connectionRAII::~connectionRAII(){
+	poolRAII->ReleaseConnection(conRAII);
+}
+
+
+
+

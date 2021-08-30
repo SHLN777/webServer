@@ -36,4 +36,20 @@ private:
 
 };
 
+
+
+
+
+
+class connectionRAII{
+
+public:
+	connectionRAII(MYSQL **con, connection_pool *connPool);
+	~connectionRAII();
+	
+private:
+	MYSQL *conRAII;
+	connection_pool *poolRAII;
+};
+
 #endif
